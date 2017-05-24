@@ -1,8 +1,8 @@
 body {
   font-family: Roboto;
   background: #2BC0E4;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to right, #aAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #aAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 ul {
@@ -12,7 +12,7 @@ ul {
 }
 
 h1 {
-  background: #2980b9;
+  background: steelblue;
   color: white;
   margin: 0;
   padding: 10px 20px;
@@ -32,7 +32,44 @@ li:nth-child(2n) {
   background: #f7f7f7;
 }
 
-span:first-of-type {
+input {
+  font-size: 18px;
+  background-color: #f7f7f7;
+  width: 100%;
+  padding: 13px 13px 13px 20px;
+  /*need to add webkits*/
+  box-sizing: border-box;
+  color: steelblue;
+  border: 3px solid rgba(0, 0, 0, 0);
+}
+
+.editInput {
+  font-size: inherit;
+  height: 40px;
+  width: 320px;
+}
+
+input:focus {
+  background: #fff;
+  border: 3px solid steelblue;
+  outline: none;
+}
+
+a {
+  color: green;
+  text-decoration: none;
+}
+
+a:visited {
+  color: green;
+  text-decoration: none;
+}
+
+li div {
+  display: inline-block;
+}
+
+.deleteButton, .editButton, .confirm {
   background: #e74c3c;
   height: 40px;
   margin-right: 20px;
@@ -44,62 +81,20 @@ span:first-of-type {
   opacity: 0;
 }
 
-span:nth-of-type(2) {
+.editButton, .confirm {
   float: right;
-  background: #374c3c;
-  height: 40px;
-  margin-left: 20px;
-  text-align: center;
-  color: white;
-  width: 0px;
-  display: inline-block;
-  transition: .2s linear;
-  opacity: 0;
+  margin-right: 0;
+  margin-left: 0;
+  background: #274c3c;
 }
 
-li:hover span {
+.confirm {
+  background: steelblue;
+}
+
+li:hover .deleteButton, li:hover .editButton, li:hover .confirm {
   width: 40px;
   opacity: 1.0;
-}
-
-input {
-  font-size: 18px;
-  background-color: #f7f7f7;
-  width: 100%;
-  padding: 13px 13px 13px 20px;
-  /*need to add webkits*/
-  box-sizing: border-box;
-  color: #2980b9;
-  border: 3px solid rgba(0, 0, 0, 0);
-}
-
-input.edit {
-  font-size: inherit;
-  background-color: #f7f7f7;
-  width: 100%;
-  height: 40px;
-  padding: inherit;
-  padding-left: 20px;
-  /*need to add webkits*/
-  box-sizing: border-box;
-  color: #2980b9;
-  border: 3px solid rgba(0, 0, 0, 0);
-}
-
-input:focus {
-  background: #fff;
-  border: 3px solid #2980b9;
-  outline: none;
-}
-
-a {
-  color: #2980b9;
-  text-decoration: none;
-}
-
-a:visited {
-  color: #2980b9;
-  text-decoration: none;
 }
 
 .fa-plus {
@@ -110,6 +105,7 @@ a:visited {
   color: gray;
   text-decoration: line-through;
 }
+
 
 #container {
   width: 360px;
