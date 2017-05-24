@@ -4,6 +4,10 @@ var liStructure = [
   "<span><i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i></span></li>"
 ];
 
+var inputStructure = [
+  "<input class=\"edit\" type=\"text\"></input>"
+];
+
 $("ul").on("click", "li", function () {
   $(this).toggleClass("completed");
 });
@@ -19,7 +23,17 @@ $("ul").on("click", "span:first-of-type", function (event){
 
 // click on edit icon to edit
 $("ul").on("click", "span:nth-of-type(2)", function (event){
-  console.log($(this).parent().text());
+  var li = $(this).parent();
+  var textFromLi = li.text();
+  textFromLi = textFromLi.trim();
+  // var testLi = $('#test');
+
+
+  li.html(inputStructure[0]);
+  var inputToEdit = li.find("input");
+  inputToEdit.attr("value", textFromLi);
+  inputToEdit.focus();
+  console.log(inputToEdit);
 
   event.stopPropagation();
 });
