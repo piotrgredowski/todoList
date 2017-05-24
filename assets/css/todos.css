@@ -130,6 +130,16 @@ li:hover .content {
   width: auto;
 }
 
+.checkComplete {
+  opacity: 0;
+  padding-left: 5px;
+  color: black;
+}
+
+.completed .checkComplete {
+  opacity: 1;
+}
+
 
 #container {
   width: 360px;

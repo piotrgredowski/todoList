@@ -5,7 +5,7 @@
 // ];
 var liStructure = [
   "<div class=\"deleteButton\"><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></div><div class=\"content\">",
-  "</div><div class=\"editButton\"><i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i></div>"
+  "<i class=\"fa fa-check checkComplete\" aria-hidden=\"true\"></i></div><div class=\"editButton\"><i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i></div>"
 ];
 
 var inputStructure = [
@@ -14,6 +14,9 @@ var inputStructure = [
 
 $("ul").on("click", ".content", function () {
   $(this).toggleClass("completed");
+  // var temp = $(this).html();
+  // $(this).html(temp + '<i class=\"fa fa-check\" aria-hidden=\"true\"></i>')
+  // console.log($(this).html());
 });
 
 // click on X to delete todo
@@ -53,7 +56,7 @@ $("ul").on("click", ".editButton", function (event){
     if (event.which === 13) {
       saveChangedTodo();
     }
-  })
+  });
 
   // console.log(parent.find('.confirm'));
   // console.log(inputToEdit.val());
