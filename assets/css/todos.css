@@ -40,7 +40,7 @@ input {
   padding: 13px 13px 13px 16px;
   /*need to add webkits*/
   box-sizing: border-box;
-  color: steelblue;
+  color: #1111aa;
   border: 3px solid rgba(0, 0, 0, 0);
 }
 
@@ -91,6 +91,10 @@ a:visited {
   background: #274c3c;
 }
 
+.editButton {
+  margin-left: 20px;
+}
+
 .confirm {
   background: steelblue;
 }
@@ -110,12 +114,14 @@ li:hover .deleteButton, li:hover .editButton, li:hover .confirm {
 }
 
 .content {
-  max-width: 247px;
+  width: 320px;
   overflow-wrap: break-word;
 }
 
 .content:hover {
+  width: 240px;
   cursor: pointer;
+  width:
 }
 
 
