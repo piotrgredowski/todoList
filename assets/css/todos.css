@@ -25,17 +25,18 @@ li {
   background: #fff;
   min-height: 40px;
   line-height: 40px;
-  color: #666;
+  color: #222;
   display: flex;
+  justify-content: space-between;
 }
 
 li:nth-child(2n) {
-  background: #ddd;
+  background: #eee;
 }
 
 input {
   font-size: 18px;
-  background-color: #ddd;
+  background-color: #eee;
   width: 100%;
   padding: 13px 13px 13px 16px;
   /*need to add webkits*/
@@ -109,12 +110,15 @@ li:hover .deleteButton, li:hover .editButton, li:hover .confirm {
 }
 
 .completed {
-  color: gray;
+  color: #ccc;
   text-decoration: line-through;
 }
 
 .content {
-  width: 320px;
+  max-width: 240px;
+  margin: auto auto auto 0px;
+  text-align: left;
+  width: auto;
   overflow-wrap: break-word;
 }
 
@@ -123,7 +127,7 @@ li:hover .deleteButton, li:hover .editButton, li:hover .confirm {
 }
 
 li:hover .content {
-  width: 240px;
+  width: auto;
 }
 
 
