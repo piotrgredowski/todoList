@@ -4,8 +4,8 @@
 //   "<span><i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i></span></li>"
 // ];
 var liStructure = [
-  "<li><div class=\"deleteButton\"><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></div><div class=\"content\">",
-  "</div><div class=\"editButton\"><i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i></div></li>"
+  "<div class=\"deleteButton\"><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></div><div class=\"content\">",
+  "</div><div class=\"editButton\"><i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i></div>"
 ];
 
 var inputStructure = [
@@ -17,7 +17,7 @@ $("ul").on("click", ".content", function () {
 });
 
 // click on X to delete todo
-$("ul").on("click", ".delete", function (event){
+$("ul").on("click", ".deleteButton", function (event){
   $(this).parent().fadeOut(500, function () {
     // these 'this's are not the same - that from up is to span, that down is for its parent, li
     $(this).remove();
@@ -42,7 +42,7 @@ $("ul").on("click", ".editButton", function (event){
   function saveChangedTodo() {
     parent.html(liStructure[0] + inputToEdit.val() + liStructure[1]);
     parent.off();
-    console.log(1);
+    console.log(parent);
   }
 
   $(parent.find('.confirm')).on("click", function () {
@@ -69,7 +69,7 @@ $("input[type='text']").keypress(function (event) {
     var todoText = $(this).val();
     $(this).val("");
     // create a new li and add to ul
-    $("ul").append(liStructure[0] + todoText + liStructure[1]);
+    $("ul").append("<li>" + liStructure[0] + todoText + liStructure[1] + "</li>");
   }
 });
 
