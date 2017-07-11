@@ -6,12 +6,12 @@
 
 <a href="https://piotrgredowski.github.io/todoList/">Demo</a>
 
-Parking lot
+<h1>Parking lot</h1>
 
-You should have installed 'node.js' in your environment to run this application.
-To run application you need to enter a command `node parking.js`.
-Optionally you can place your commands in file and run application including this file's name e.g. `node parking.js file_inputs.txt`.
-You can use following commands:
+<p>You should have installed 'node.js' in your environment to run this application.</p>
+<p>To run application you need to enter a command `node parking.js`.</p>
+<p>Optionally you can place your commands in file and run application including this file's name e.g. `node parking.js file_inputs.txt`.</p>
+<p>You can use following commands:</p>
 `
 create_parking_lot <number>
 park <registration number> <colour>
